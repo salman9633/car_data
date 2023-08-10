@@ -1,13 +1,17 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { removeCar } from '../store'
 
 function CarList() {
+  const dispach=useDispatch()
+
   const cars=useSelector(state=>{
     return state.cars.carsData
   })
 
-  function handleDeleteCar(){
-    
+
+  function handleDeleteCar(car){
+    dispach(removeCar(car.id));
   }
 
   const carList=cars.map((elem,index)=>{
