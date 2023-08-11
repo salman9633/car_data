@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+// import './App.css'
 import CarForm from './components/carForm';
 import CarList from './components/carList';
 import CarSearch from './components/carSearch';
@@ -9,10 +9,10 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-   <div>
+   <div className='container is-fluid'>
       <CarForm></CarForm>
-      <CarList></CarList>
       <CarSearch></CarSearch>
+      <CarList></CarList>
       <CarValue></CarValue>
    </div>
   )
